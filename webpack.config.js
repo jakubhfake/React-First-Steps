@@ -79,5 +79,8 @@ const prodConfig = () => ({
 module.exports = (env, argv) => {
   const modeConfig = argv.mode == 'production' ? prodConfig : devConfig;
 
+
   return merge(baseConfig(), modeConfig());
 };
+
+
