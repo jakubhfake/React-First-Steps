@@ -12,7 +12,8 @@
 .columns {
   display: flex;
   justify-content: space-between;
-  overflow: auto;
+  overflow: inherit;
+  align-content: stretch;
 }
 
 .creator {

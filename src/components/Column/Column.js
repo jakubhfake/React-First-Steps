@@ -4,6 +4,7 @@ import styles from './Column.scss';
 import Creator from '../Creator/Creator';
 import Card from "../Card/Card";
 import {settings} from '../../data/dataStore';
+import Icon from '../Icon/Icon';
 
 class Column extends React.Component {
     state = {
@@ -18,16 +19,11 @@ class Column extends React.Component {
         console.log('this in column', this);
         this.setState(state => (
             {
-                columns: [
+                cards: [
+                    ...state.cards,
                     {
-
-                        cards: [
-                        ...state.cards,
-                        {
-                            key: state.cards.length ? state.cards[state.cards.length-1].key+1 : 0,
-                            title,
-                        }
-                        ]
+                        key: state.cards.length ? state.cards[state.cards.length-1].key+1 : 0,
+                        title,
                     }
                 ]
             }
@@ -36,12 +32,15 @@ class Column extends React.Component {
     render() {
         return (
         <section className={styles.component}>
-            <h3 className={styles.title}>{this.props.title}</h3>
-            <div>
+            <h3 className={styles.title}>{this.props.title}
+                <span className={styles.icon}>
+                    <Icon name={this.props.icon}/>
+                </span>
+            </h3>
                 {this.state.cards.map(({key, ...cardsProps}) =>
                     <Card key={key} {...cardsProps}/> 
                 )}
-            </div>
+            
             <div className={styles.creator}>
                 <Creator
                     text={settings.cardCreatorText}

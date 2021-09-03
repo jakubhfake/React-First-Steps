@@ -5,7 +5,6 @@ import PropTypes from "prop-types";
 import Column from "../Column/Column.js";
 import { settings, listData } from "../../data/dataStore";
 import Creator from "../Creator/Creator";
-import Card from "../Card/Card";
 
 class List extends React.Component {
   state = {
@@ -45,8 +44,8 @@ class List extends React.Component {
         {this.props.description}
         <div className={styles.columns}>
           {this.state.columns.map(({ key, ...columnProps }) => (
-            <Column key={key} {...columnProps}>
-            </Column>
+            <Column key={key} {...columnProps}/>
+            
           ))}
         </div>
         <div className={styles.creator}>
