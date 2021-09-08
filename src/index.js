@@ -1,6 +1,3 @@
-const test = "1";
-console.log(test);
-
 import React from 'react';
 import './styles/normalize.scss';
 import './styles/global.scss';
