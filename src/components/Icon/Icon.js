@@ -1,7 +1,10 @@
 import React from 'react';
-//import {listData} from '../../data/dataStore'
+import PropTypes from 'prop-types';
 
-// eslint-disable-next-line react/prop-types
+Icon.propTypes = {
+  name: PropTypes.node,
+};
+
 const Icon = props => (<i className={`fas fa-${props.name}`}></i>);
 
 export default Icon;
