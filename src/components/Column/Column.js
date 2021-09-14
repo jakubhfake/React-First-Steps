@@ -1,23 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Column.scss';
-//import Creator from '../Creator/Creator';
+import Creator from '../Creator/Creator';
 import Card from '../Card/Card';
 //import {settings} from '../../data/dataStore';
 import Icon from '../Icon/Icon';
+import { settings } from '../../data/dataStore';
 
 class Column extends React.Component {
     
 
     static propTypes = {
       title: PropTypes.node.isRequired,
-      cards: PropTypes.node.isRequired,
+      cards: PropTypes.array.isRequired,
       icon: PropTypes.node.isRequired,
+      addCard: PropTypes.func,
     };
-
+    static defaultProps = {
+      icon: settings.defaultColumnIcon,
+    }
     
     render() {
-      const {title, icon, cards} = this.props;
+      const {title, icon, cards, addCard} = this.props;
       return (
         <section className={styles.component}>
           <h3 className={styles.title}>{title}
@@ -30,12 +34,12 @@ class Column extends React.Component {
           ))}
       
             
-          {/*<div className={styles.creator}>
+          <div className={styles.creator}>
             <Creator
               text={settings.cardCreatorText}
-              action={title => this.addCard(title)}
+              action={addCard}
             />
-          </div>        */}
+          </div>        
         </section>
       );
     }
