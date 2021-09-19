@@ -56,7 +56,6 @@ class Search extends React.Component {
         </div>
         <div>
           { countVisible == countAll ? '' : `${countVisible} / ${countAll}` }
-          {`${countVisible} / ${countAll}`}
         </div>
       </div>
     );
