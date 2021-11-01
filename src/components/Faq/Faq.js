@@ -1,9 +1,9 @@
 import React from 'react';
-import ReactHtmlParser from 'react-html-parser';
 import PropTypes from 'prop-types';
 import Container from '../Container/Container.js';
 import Hero from '../Hero/Hero.js';
 import styles from './Faq.scss';
+import { faqPageContent } from '../../data/dataStore.js';
 
 class Faq extends React.Component {
   static propTypes = {
@@ -11,6 +11,13 @@ class Faq extends React.Component {
     image: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
   }
+
+  static defaultProps = {
+    title: faqPageContent.title,
+    image: faqPageContent.image,
+    description: faqPageContent.description,
+  };
+
   render() {
     const {title, image, description} = this.props;
     return (
@@ -18,7 +25,7 @@ class Faq extends React.Component {
         <section className={styles.component}>
           <Hero titleText={title} titleImg={image}/>
           <div className={styles.description}>
-            {ReactHtmlParser(description)}
+            {description}
           </div>
         </section>
       </Container>

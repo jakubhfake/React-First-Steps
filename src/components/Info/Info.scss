@@ -1,0 +1,10 @@
+@import '../../styles/settings.scss';
+
+.component {
+  padding: 0 0 $base-size 0;
+}
+
+.description:not(:empty) {
+  margin: 0 0 ($base-size * 3);
+  text-align: center;
+}

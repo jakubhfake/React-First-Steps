@@ -22,13 +22,13 @@ export const pageContents = {
 
 export const infoPageContent = {
   title: 'My first React app',
-  description: 'Interesting things I want to check out!',
+  description: 'This is my first react app! This is my first react app! This is my first react app! This is my first react app!',
   image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
 };
 
 export const faqPageContent = {
   title: 'My first React app',
-  description: 'Interesting things I want to check out!',
+  description: 'This is my first react app!',
   image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
 };
 
@@ -156,7 +156,6 @@ const cards = [
 
 const initialStoreData = {
   app: {...pageContents},
-  faq: {...faqPageContent},
   lists: [...lists],
   columns: [...columns],
   cards: [...cards],
