@@ -12,11 +12,24 @@ export const settings = {
   },
   defaultListDescription: '<p>I can do all the things!!!</p>',
   defaultColumnIcon: 'list-alt',
+  defautHeaderIcon: 'rocket',
 };
 
 export const pageContents = {
   title: 'My first React app',
   subtitle: 'A simple to-do app, with lists, columns and cards',
+};
+
+export const infoPageContent = {
+  title: 'My first React app',
+  description: 'Interesting things I want to check out!',
+  image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+};
+
+export const faqPageContent = {
+  title: 'My first React app',
+  description: 'Interesting things I want to check out!',
+  image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
 };
 
 export const listData = {
@@ -143,6 +156,7 @@ const cards = [
 
 const initialStoreData = {
   app: {...pageContents},
+  faq: {...faqPageContent},
   lists: [...lists],
   columns: [...columns],
   cards: [...cards],
