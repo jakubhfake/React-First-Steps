@@ -1,15 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Column.scss';
-import Creator from '../Creator/Creator';
+import Creator from '../Creator/Creator.scss';
 import Card from '../Card/Card';
-//import {settings} from '../../data/dataStore';
 import Icon from '../Icon/Icon';
 import { settings } from '../../data/dataStore';
 
 class Column extends React.Component {
     
-
     static propTypes = {
       title: PropTypes.node.isRequired,
       cards: PropTypes.array.isRequired,

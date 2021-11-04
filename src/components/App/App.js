@@ -8,6 +8,7 @@ import {BrowserRouter, Route} from 'react-router-dom';
 import MainLayout from '../MainLayout/MainLayout.js';
 import {AnimatedSwitch} from 'react-router-transition';
 import List from '../List/ListContainer.js';
+import SearchResults from '../SearchResults/SearchResultsContainer';
 
 const App = () => (
   <BrowserRouter>
@@ -22,6 +23,7 @@ const App = () => (
         <Route exact path='/info' component={Info} />
         <Route exact path='/Faq' component={Faq} />
         <Route exact path="/list/:id" component={List} />
+        <Route exact path="/search/:searchString" component={SearchResults} />
       </AnimatedSwitch>
     </MainLayout>
   </BrowserRouter>
