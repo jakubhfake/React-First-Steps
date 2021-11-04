@@ -5,6 +5,7 @@ import {NavLink, Link} from 'react-router-dom';
 import styles from './Header.scss';
 import Icon from '../Icon/Icon.js';
 import {settings} from '../../data/dataStore.js';
+import Search from '../Search/Search';
 
 class Header extends React.Component {
     static propTypes = {
@@ -22,10 +23,11 @@ class Header extends React.Component {
               <Link className={styles.logo} to={'/'}>
                 <Icon name={icon}/>
               </Link>
-              <nav>
+              <nav className={styles.wrapper}>
                 <NavLink exact to='/' activeClassName='active'>Home</NavLink>
                 <NavLink exact to='/info' activeClassName='active'>Info</NavLink>
                 <NavLink exact to='/FAQ' activeClassName='active'>FAQ</NavLink>
+                <Search/>
               </nav>
             </div>
           </Container>
