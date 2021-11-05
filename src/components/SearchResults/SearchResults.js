@@ -1,18 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './SearchResults.scss';
-// import Card from '../Card/Card';
 import Icon from '../Icon/Icon';
 import Card from '../Card/Card';
 import { settings } from '../../data/dataStore';
 import Container from '../Container/Container';
-// import { settings } from '../../data/dataStore';
 
 const SearchResults = ({cards, title, icon}) => (
   
   <Container>
     <section className={styles.component}>
-    
       <h3 className={styles.title}>{title}
         <span className={styles.icon}>
           <Icon name={icon}/>

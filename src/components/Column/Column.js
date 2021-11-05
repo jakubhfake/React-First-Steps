@@ -30,8 +30,6 @@ class Column extends React.Component {
           {cards.map(cardData => (
             <Card key={cardData.id} {...cardData}/>
           ))}
-      
-            
           <div className={styles.creator}>
             <Creator
               text={settings.cardCreatorText}
